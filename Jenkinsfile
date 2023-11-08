@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']],
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']],
                      doGenerateSubmoduleConfigurations: false, extensions: [], 
                      userRemoteConfigs: [[url: 'https://github.com/SnehashisWalk/jenkins-terraform-react']]])
                 }
